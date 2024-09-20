@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>小屁孩, 生日快乐鸭！</title>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="shortcut icon" href="./static/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./static/icon/icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
@@ -108,7 +108,7 @@
     <div class="swiper-wrapper">
         <div class="swiper-slide">
             <div id="musicButton">
-                <img src="./static/music_play.svg"/>
+                <img src="./static/icon/music_play.svg"/>
             </div>
         </div>
         <div class="swiper-slide" id="cake_page">
@@ -488,7 +488,7 @@
                 </div>
                 <div class="popImage">
                     <div class="blur"></div>
-                    <img src="./static/qr_code.png"><!-- 礼物点击展示二维码-->
+                    <img src="./static/icon/qr_code.png"><!-- 礼物点击展示二维码-->
                 </div>
             </div>
         </div>
@@ -497,10 +497,10 @@
     </div>
 <!--    <div class="swiper-button-next"></div>-->
     <div id="next_page_button">
-        <img src="./static/more_down.svg">
+        <img src="./static/icon/more_down.svg">
     </div>
 <!--    <div class="prev_page_button">-->
-<!--        <img src="./static/more_down.svg">-->
+<!--        <img src="./static/icon/more_down.svg">-->
 <!--    </div>-->
 </div>
 
@@ -572,22 +572,22 @@
         }
     );
 
-    const music = new Audio("./static/Connie_Talbot-Count_on_Me_compressed.mp3"); // TODO, plz use CDN instead
+    const music = new Audio("./static/media/Connie_Talbot-Count_on_Me_compressed.mp3"); // TODO, plz use CDN instead
     music.addEventListener("ended", function (){ music.play();},false);
 
     $("#musicButton").click(function (){
         if (!playing){
             music.play();
-            $(this).children("img").attr("src", "./static/music_stop.svg");
+            $(this).children("img").attr("src", "./static/icon/music_stop.svg");
         } else  {
             music.pause();
-            $(this).children("img").attr("src", "./static/music_play.svg");
+            $(this).children("img").attr("src", "./static/icon/music_play.svg");
         }
         playing = !playing;
     });
 
     $(".popImage img").click(function (){ // 二维码点击也可以跳转
-        window.location.href="https://baidu.com/";  // TODO change
+        window.location.href="https://zexian-birthday.github.io/second.html";  // TODO change
     });
 
 </script>
